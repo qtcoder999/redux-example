@@ -3,20 +3,16 @@ import { connect } from "react-redux";
 import { Counter } from "../../components/counter/counter"
 import { increment } from "./actions"
 
-function CounterContainer({ counter, increment, books, ...props }) {
-    return (<Counter increment={increment} counter={counter} books={books} />)
+function CounterContainer({ counter, increment, ...props }) {
+
+    return (<Counter increment={increment} counter={counter} />)
 
 }
 
 
-function mapStateToProps(state) {
+function mapStateToProps({ count: { counter } }) {
 
-    console.log(state)
-
-    const { count: { counter } } = state;
-    const { books: { books } } = state;
-
-    return { counter, books }
+    return { counter }
 
 }
 

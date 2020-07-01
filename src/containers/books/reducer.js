@@ -2,11 +2,11 @@ import { INCREMENT } from "./constants";
 
 const initialState = {
 
-    counter: 0
+    books: ["The Art of War by Sun Tzu", "The Art of learning by Josh Waitzkin"]
 
 }
 
-export const countReducer = (state = initialState, action) => {
+export const bookReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
