@@ -11,7 +11,6 @@ function CounterContainer({ counter, increment, books, ...props }) {
 
 function mapStateToProps(state) {
 
-    console.log(state)
 
     const { count: { counter } } = state;
     const { books: { books } } = state;

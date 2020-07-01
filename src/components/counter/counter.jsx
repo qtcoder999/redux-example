@@ -1,7 +1,6 @@
 import React from 'react';
 
 export function Counter({ counter, increment, books, ...props }) {
-    console.log(props)
     return (
         <>
             <h1>Hello Counter : {counter}</h1>
@@ -10,9 +9,9 @@ export function Counter({ counter, increment, books, ...props }) {
             <br />
             <br />
             <div>
-                {books && books.map((item) => {
+                {books && books.map((item, index) => {
 
-                    return <div>{item}</div>
+                    return <div key={index}>{item}</div>
 
 
                 })}
