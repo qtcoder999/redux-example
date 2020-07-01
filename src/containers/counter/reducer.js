@@ -1,3 +1,5 @@
+import { INCREMENT } from "./constants";
+
 const initialState = {
 
     counter: 0
@@ -5,8 +7,28 @@ const initialState = {
 }
 
 export const countReducer = (state = initialState, action) => {
+    // console.log("reaching", state, action)
 
-    return state;
+    switch (action.type) {
 
+
+
+        case INCREMENT:
+
+
+
+            let newState = { ...state };
+
+            newState.counter += 1;
+
+            return newState;
+            break;
+
+
+        default: return state
+    };
 
 }
+
+
+
